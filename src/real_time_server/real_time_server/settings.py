@@ -56,6 +56,21 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'real_time_server.urls'
 
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+    # 'DEFAULT_RENDERER_CLASSES': (
+    #     'rest_framework.renderers.BrowsableAPIRenderer',
+    #     'rest_framework.renderers.JSONRenderer',
+    #     'rest_framework.renderers.CoreJSONRenderer',
+    #     'rest_framework_swagger.renderers.SwaggerUIRenderer',
+    #     'rest_framework_swagger.renderers.OpenAPIRenderer',
+    # ),
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    # ],
+}
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
